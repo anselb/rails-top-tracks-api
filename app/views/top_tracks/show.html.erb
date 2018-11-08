@@ -8,11 +8,16 @@
 <p>
   <strong>Album name:</strong>
   <%= @top_track.album_name %>
+
 </p>
 
 <p>
   <strong>Personal ranking:</strong>
   <%= @top_track.personal_ranking %>
+</p>
+
+<p>
+  <%= @track[0].inspect %>
 </p>
 
 <%= link_to 'Edit', edit_top_track_path(@top_track) %> |

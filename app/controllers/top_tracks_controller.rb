@@ -12,6 +12,8 @@ class TopTracksController < ApplicationController
   # GET /top_tracks/1
   # GET /top_tracks/1.json
   def show
+    @top_track = TopTrack.find(params[:id])
+    @track = RSpotify::Track.search(@top_track.track_name)
   end
 
   # GET /top_tracks/new
